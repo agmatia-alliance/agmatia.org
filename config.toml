@@ -1,0 +1,13 @@
+base_url = "https://agmatia.org"
+title = "Agmatia Alliance"
+description = "Pragmatism in practice."
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+
+[extra]
+tagline = "Pragmatism in practice."
+email_contact = "contact@agmatia.org"
+email_security = "security@agmatia.org"
+github_url = "https://github.com/agmatia"
+bluesky_url = "https://bsky.app/profile/agmatia.org"

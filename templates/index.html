@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ config.title }} — {{ config.extra.tagline }}</title>
+  <meta name="description" content="{{ config.description }}" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #13171C;
+      --surface: #181D24;
+      --border: #2A323D;
+      --text: #F4F6F8;
+      --muted: #94A3B8;
+      --graphite: #4A5568;
+      --accent: #3898B8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .brand img {
+      width: 34px;
+      height: 34px;
+      display: block;
+    }
+
+    .brand-title {
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    .hero {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .tagline {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 4.5vw, 40px);
+      font-weight: 700;
+      line-height: 1.2;
+      max-width: 660px;
+      margin-bottom: 20px;
+    }
+
+    .lead {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 620px;
+    }
+
+    .project {
+      padding: 48px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 28px;
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .panel h2 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    .status {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      padding: 3px 10px;
+    }
+
+    .panel p {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 640px;
+      margin-bottom: 20px;
+    }
+
+    .panel a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid var(--graphite);
+      padding-bottom: 2px;
+    }
+
+    .panel a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    footer {
+      padding-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/">
+        <img src="/logo.svg" alt="Agmatia Alliance" />
+        <span class="brand-title">{{ config.title }}</span>
+      </a>
+      <nav>
+        <a href="{{ config.extra.github_url }}" target="_blank" rel="noopener">GitHub</a>
+        <a href="{{ config.extra.bluesky_url }}" target="_blank" rel="noopener">Bluesky</a>
+        <a href="mailto:{{ config.extra.email_contact }}">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="tagline">{{ config.extra.tagline }}</div>
+        <h1>Predictable system architecture and transparent software engineering.</h1>
+        <p class="lead">
+          Agmatia Alliance is an independent engineering collective building reliable,
+          low-overhead operating environments and core infrastructure without unnecessary abstraction.
+        </p>
+      </section>
+
+      <section class="project">
+        <div class="section-label">Primary Initiative</div>
+        <div class="panel">
+          <div class="panel-header">
+            <h2>Aegis Linux</h2>
+            <span class="status">IN DEVELOPMENT</span>
+          </div>
+          <p>
+            A streamlined, deterministic Linux distribution engineered around clean system boundaries,
+            reproducible configuration, and predictable behavior under load.
+          </p>
+          <a href="{{ config.extra.github_url }}" target="_blank" rel="noopener">Follow development on GitHub -&gt;</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; 2026 {{ config.title }}</span>
+      <span>
+        Contact: <a href="mailto:{{ config.extra.email_contact }}">{{ config.extra.email_contact }}</a> &middot;
+        Security: <a href="mailto:{{ config.extra.email_security }}">{{ config.extra.email_security }}</a>
+      </span>
+    </footer>
+  </div>
+</body>
+</html>

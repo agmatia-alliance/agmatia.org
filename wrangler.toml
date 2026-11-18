@@ -1,3 +1,5 @@
-name = "agmatia-alliance"
+name = "agmatia-org"
 compatibility_date = "2026-11-18"
-pages_build_output_dir = "./.vitepress/dist"
+
+[assets]
+directory = "./.vitepress/dist"

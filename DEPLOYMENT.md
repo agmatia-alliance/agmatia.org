@@ -1,16 +1,14 @@
-# Cloudflare Pages deployment
+# Cloudflare static assets deployment
 
-Cloudflare Pages can build and deploy this repository directly from GitHub.
-The Pages settings are:
+This repository builds with VitePress and is configured for Cloudflare Workers
+Static Assets. `wrangler.toml` sets the Worker name and serves the generated
+files from `.vitepress/dist`.
 
-- Root directory: repository root (leave blank)
+In Cloudflare, connect this GitHub repository as a Worker and configure:
+
+- Root directory: repository root (leave blank; do not set it to `docs`)
 - Build command: `npm run build`
-- Build output directory: `.vitepress/dist`
+- Deploy command: `npx wrangler deploy`
 
-The project name and output directory are also declared in `wrangler.toml`.
-If the existing Pages project has a different name, change `name` there to
-match it.
-
-In Cloudflare, connect this GitHub repository to a Pages project and set the
-production branch to `main`. Cloudflare will then build and deploy on each push;
-no GitHub Actions workflow, API token, or account ID secret is needed.
+Cloudflare will then build and deploy on pushes to the configured production
+branch. No GitHub Actions workflow, API token, or account ID secret is needed.

@@ -1,4 +1,4 @@
-# Cloudflare static assets deployment
+# Deployment: Cloudflare static assets
 
 This repository builds with VitePress and is configured for Cloudflare Workers
 Static Assets. `wrangler.toml` sets the Worker name and serves the generated

@@ -210,6 +210,9 @@ export default defineConfig({
   lang: 'en',
   cleanUrls: true,
   appearance: true,
+  sitemap: {
+    hostname: 'https://agmatia.org'
+  },
 
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/icons/favicon.svg' }],

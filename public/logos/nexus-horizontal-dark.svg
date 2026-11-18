@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img" aria-labelledby="title">
+  <title id="title">Agmatia Alliance — Horizontal Lockup</title>
+  <rect width="960" height="300" fill="#13171C"/>
+  <g transform="translate(36 0) scale(0.52) translate(0 7)" fill="#F4F6F8">
+          <path d="M160 96 H352 V160 H288 L256 192 L224 160 H160 Z" transform="rotate(0 256 256)"/><path d="M160 96 H352 V160 H288 L256 192 L224 160 H160 Z" transform="rotate(90 256 256)"/><path d="M160 96 H352 V160 H288 L256 192 L224 160 H160 Z" transform="rotate(180 256 256)"/><path d="M160 96 H352 V160 H288 L256 192 L224 160 H160 Z" transform="rotate(270 256 256)"/>
+        </g>
+  
+        <text x="330" y="135" font-family="IBM Plex Sans, Arial, sans-serif" font-size="57" font-weight="700" letter-spacing="1.4" fill="#F4F6F8">AGMATIA</text>
+        <text x="332" y="178" font-family="IBM Plex Sans, Arial, sans-serif" font-size="17" letter-spacing="7" fill="#F4F6F8" opacity=".78">ALLIANCE</text>
+        <text x="330" y="222" font-family="IBM Plex Sans, Arial, sans-serif" font-size="17" letter-spacing="2.2" fill="#F4F6F8" opacity=".78">PRAGMATISM IN PRACTICE.</text>
+</svg>

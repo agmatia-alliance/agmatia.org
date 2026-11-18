@@ -1,0 +1,29 @@
+{
+  "name": "agmatia-alliance.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agmatia-alliance/agmatia-alliance.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agmatia-alliance/agmatia-alliance.github.io/issues"
+  },
+  "homepage": "https://github.com/agmatia-alliance/agmatia-alliance.github.io#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "@lucide/vue": "^1.75.0",
+    "@vue/theme": "^2.4.0"
+  }
+}

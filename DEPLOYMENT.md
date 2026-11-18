@@ -1,9 +1,16 @@
-# GitHub Pages deployment
+# Cloudflare Pages deployment
 
-The site is built with VitePress and deployed by `.github/workflows/deploy.yml`.
-The workflow builds the site and publishes `.vitepress/dist` to GitHub Pages.
+Cloudflare Pages can build and deploy this repository directly from GitHub.
+The Pages settings are:
 
-In the repository settings, open **Pages** and set the build and deployment
-source to **GitHub Actions**. No Cloudflare API token or account ID is needed.
+- Root directory: repository root (leave blank)
+- Build command: `npm run build`
+- Build output directory: `.vitepress/dist`
 
-Pushes to `main` and manually triggered runs deploy the site.
+The project name and output directory are also declared in `wrangler.toml`.
+If the existing Pages project has a different name, change `name` there to
+match it.
+
+In Cloudflare, connect this GitHub repository to a Pages project and set the
+production branch to `main`. Cloudflare will then build and deploy on each push;
+no GitHub Actions workflow, API token, or account ID secret is needed.

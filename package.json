@@ -1,12 +1,13 @@
 {
   "name": "agmatia-alliance.github.io",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
+    "dev": "vite",
+    "build": "node scripts/generate-sitemap.mjs && vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,16 @@
   },
   "homepage": "https://github.com/agmatia-alliance/agmatia-alliance.github.io#readme",
   "devDependencies": {
-    "vitepress": "^1.6.4"
+    "@vitejs/plugin-vue": "^6.0.11",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.8",
+    "vue-tsc": "^3.3.14"
   },
   "dependencies": {
-    "@lucide/vue": "^1.75.0",
-    "@vue/theme": "^2.4.0"
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "@material/web": "^2.5.0",
+    "simple-icons": "^16.38.1",
+    "vue": "^3.5.46",
+    "vue-router": "^5.5.1"
   }
 }

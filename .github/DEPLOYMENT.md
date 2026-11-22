@@ -1,8 +1,8 @@
 # Deployment: Cloudflare static assets
 
-This repository builds with VitePress and is configured for Cloudflare Workers
-Static Assets. `wrangler.toml` sets the Worker name and serves the generated
-files from `.vitepress/dist`.
+This repository builds with Vue, Vite, and Vuetify and is configured for
+Cloudflare Workers Static Assets. `wrangler.toml` sets the Worker name and
+serves the generated files from `./dist`.
 
 In Cloudflare, connect this GitHub repository as a Worker and configure:
 

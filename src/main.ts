@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import { createHead } from '@unhead/vue/client'
 import '@material/web/button/filled-button.js'
 import '@material/web/button/filled-tonal-button.js'
 import '@material/web/button/text-button.js'
@@ -55,4 +56,9 @@ router.afterEach((to) => {
 
 document.body.classList.toggle('dark', preferredTheme === 'dark')
 
-createApp(App).use(router).mount('#app')
+const app = createApp(App)
+const head = createHead()
+
+app.use(head)
+app.use(router)
+app.mount('#app')

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { useHead } from '@unhead/vue'
 import BrandMark from './components/BrandMark.vue'
 import PlatformIcon from './components/PlatformIcon.vue'
 
@@ -15,6 +16,31 @@ const links = [
   { label: 'Projects', to: '/projects', icon: 'folder' },
   { label: 'Contact', to: '/contact', icon: 'chat' }
 ]
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Agmatia Alliance',
+        url: 'https://agmatia.org',
+        founder: {
+          '@type': 'Person',
+          name: 'Andriy Murha',
+          alternateName: 'Andrew Hartmann',
+          jobTitle: 'Founder & Systems Engineer',
+          url: 'https://agmatia.org/about',
+          sameAs: [
+            'https://bsky.app/profile/andrew.agmatia.org',
+            'https://github.com/andriymurha'
+          ]
+        }
+      })
+    }
+  ]
+})
 
 function toggleTheme() {
   const dark = !document.body.classList.contains('dark')

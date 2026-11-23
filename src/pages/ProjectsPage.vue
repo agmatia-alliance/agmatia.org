@@ -1,4 +1,19 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Projects — Agmatia Alliance',
+  meta: [
+    { name: 'description', content: 'Explore practical software, dependable systems, and open work from Agmatia Alliance.' },
+    { property: 'og:title', content: 'Projects — Agmatia Alliance' },
+    { property: 'og:description', content: 'Explore practical software, dependable systems, and open work from Agmatia Alliance.' },
+    { property: 'og:url', content: 'https://agmatia.org/projects' },
+    { name: 'twitter:title', content: 'Projects — Agmatia Alliance' },
+    { name: 'twitter:description', content: 'Explore practical software, dependable systems, and open work from Agmatia Alliance.' }
+  ],
+  link: [{ rel: 'canonical', href: 'https://agmatia.org/projects' }]
+})
+
 const areas = [
   {
     icon: 'code',

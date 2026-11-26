@@ -88,18 +88,6 @@ const process = [
         </div>
       </div>
 
-      <md-outlined-card class="hero-card">
-        <div class="hero-card-grid" aria-hidden="true"></div>
-        <div class="hero-symbol-wrap">
-          <span class="symbol-halo"></span>
-          <BrandMark class="hero-symbol" />
-        </div>
-        <div class="hero-card-caption">
-          <span>Software</span>
-          <span>Systems</span>
-          <span>Open work</span>
-        </div>
-      </md-outlined-card>
     </section>
 
     <section class="home-section capabilities-section">

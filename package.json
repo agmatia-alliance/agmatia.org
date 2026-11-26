@@ -2,11 +2,11 @@
   "name": "agmatia-alliance.github.io",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
+  "description": "Agmatia Alliance — practical software and dependable systems",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-sitemap.mjs && vue-tsc --noEmit && vite build",
+    "build": "node scripts/generate-sitemap.mjs && vue-tsc --noEmit && vite-ssg build",
     "preview": "vite preview"
   },
   "repository": {
@@ -24,12 +24,13 @@
     "@vitejs/plugin-vue": "^6.0.11",
     "typescript": "^6.0.3",
     "vite": "^8.3.8",
+    "vite-ssg": "^28.3.0",
     "vue-tsc": "^3.3.14"
   },
   "dependencies": {
     "@fontsource/ibm-plex-sans": "^5.3.0",
     "@material/web": "^2.5.0",
-    "@unhead/vue": "^3.4.3",
+    "@unhead/vue": "^2.1.18",
     "simple-icons": "^16.38.1",
     "vue": "^3.5.46",
     "vue-router": "^5.5.1"

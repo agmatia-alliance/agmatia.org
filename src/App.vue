@@ -7,7 +7,9 @@ import PlatformIcon from './components/PlatformIcon.vue'
 
 const route = useRoute()
 const activePath = computed(() => route.path)
-const isDark = computed(() => document.body.classList.contains('dark'))
+const isDark = computed(() =>
+  typeof document !== 'undefined' && document.body.classList.contains('dark')
+)
 const mobileMenu = ref<{ show: () => void } | null>(null)
 
 const links = [
@@ -29,9 +31,21 @@ useHead({
         founder: {
           '@type': 'Person',
           name: 'Andriy Murha',
-          alternateName: 'Andrew Hartmann',
-          jobTitle: 'Founder & Systems Engineer',
+          jobTitle: 'Founder, Systems Engineer & Backend Developer',
+          description: 'Independent systems engineer focused on clear boundaries, dependable software, backend development, and practical decisions from design through operation.',
           url: 'https://agmatia.org/about',
+          worksFor: {
+            '@type': 'Organization',
+            name: 'Agmatia Alliance',
+            url: 'https://agmatia.org'
+          },
+          knowsAbout: [
+            'Systems Engineering',
+            'Backend Development',
+            'Linux',
+            'Software Architecture',
+            'Practical Software Development'
+          ],
           sameAs: [
             'https://bsky.app/profile/andrew.agmatia.org',
             'https://github.com/andriymurha'

@@ -1,4 +1,53 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'About — Agmatia Alliance',
+  meta: [
+    { name: 'description', content: 'Meet Agmatia Alliance and learn how our independent engineering collective builds practical software and dependable systems.' },
+    { property: 'og:title', content: 'About — Agmatia Alliance' },
+    { property: 'og:description', content: 'Meet Agmatia Alliance and learn how our independent engineering collective builds practical software and dependable systems.' },
+    { property: 'og:url', content: 'https://agmatia.org/about' },
+    { name: 'twitter:title', content: 'About — Agmatia Alliance' },
+    { name: 'twitter:description', content: 'Meet Agmatia Alliance and learn how our independent engineering collective builds practical software and dependable systems.' }
+  ],
+  link: [{ rel: 'canonical', href: 'https://agmatia.org/about' }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'ProfilePage',
+        name: 'About Agmatia Alliance',
+        url: 'https://agmatia.org/about',
+        about: {
+          '@type': 'Person',
+          name: 'Andriy Murha',
+          jobTitle: 'Founder, Systems Engineer & Backend Developer',
+          description: 'Independent systems engineer focused on clear boundaries, dependable software, backend development, and practical decisions from design through operation.',
+          url: 'https://agmatia.org/about',
+          sameAs: [
+            'https://github.com/andriymurha',
+            'https://bsky.app/profile/andrew.agmatia.org'
+          ],
+          worksFor: {
+            '@type': 'Organization',
+            name: 'Agmatia Alliance',
+            url: 'https://agmatia.org'
+          },
+          knowsAbout: [
+            'Systems Engineering',
+            'Backend Development',
+            'Linux',
+            'Software Architecture',
+            'Practical Software Development'
+          ]
+        }
+      })
+    }
+  ]
+})
+
 const principles = [
   {
     icon: 'lightbulb',

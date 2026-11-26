@@ -1,6 +1,20 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useHead } from '@unhead/vue'
 import PlatformIcon from '../components/PlatformIcon.vue'
+
+useHead({
+  title: 'Contact — Agmatia Alliance',
+  meta: [
+    { name: 'description', content: 'Contact Agmatia Alliance to discuss practical software, dependable systems, open work, or an engineering problem.' },
+    { property: 'og:title', content: 'Contact — Agmatia Alliance' },
+    { property: 'og:description', content: 'Contact Agmatia Alliance to discuss practical software, dependable systems, open work, or an engineering problem.' },
+    { property: 'og:url', content: 'https://agmatia.org/contact' },
+    { name: 'twitter:title', content: 'Contact — Agmatia Alliance' },
+    { name: 'twitter:description', content: 'Contact Agmatia Alliance to discuss practical software, dependable systems, open work, or an engineering problem.' }
+  ],
+  link: [{ rel: 'canonical', href: 'https://agmatia.org/contact' }]
+})
 
 const email = ref('')
 const subject = ref('')

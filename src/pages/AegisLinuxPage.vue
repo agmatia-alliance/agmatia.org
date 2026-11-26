@@ -1,4 +1,38 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Aegis Linux — Agmatia Alliance',
+  meta: [
+    { name: 'description', content: 'Learn about the Aegis Linux concept: a possible Fedora Atomic-based Linux experience focused on clarity and dependable systems.' },
+    { property: 'og:title', content: 'Aegis Linux — Agmatia Alliance' },
+    { property: 'og:description', content: 'Learn about the Aegis Linux concept: a possible Fedora Atomic-based Linux experience focused on clarity and dependable systems.' },
+    { property: 'og:url', content: 'https://agmatia.org/projects/aegis-linux' },
+    { name: 'twitter:title', content: 'Aegis Linux — Agmatia Alliance' },
+    { name: 'twitter:description', content: 'Learn about the Aegis Linux concept: a possible Fedora Atomic-based Linux experience focused on clarity and dependable systems.' }
+  ],
+  link: [{ rel: 'canonical', href: 'https://agmatia.org/projects/aegis-linux' }],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'CreativeWork',
+        name: 'Aegis Linux',
+        description: 'A concept for a clear, dependable Linux experience based on Fedora Atomic.',
+        url: 'https://agmatia.org/projects/aegis-linux',
+        isAccessibleForFree: true,
+        creativeWorkStatus: 'Concept',
+        author: {
+          '@type': 'Organization',
+          name: 'Agmatia Alliance',
+          url: 'https://agmatia.org'
+        }
+      })
+    }
+  ]
+})
+
 const directions = [
   {
     icon: 'layers',

@@ -1,5 +1,19 @@
 <script setup lang="ts">
+import { useHead } from '@unhead/vue'
 import BrandMark from '../components/BrandMark.vue'
+
+useHead({
+  title: 'Agmatia Alliance',
+  meta: [
+    { name: 'description', content: 'Agmatia Alliance builds useful software and dependable systems through pragmatic, independent engineering.' },
+    { property: 'og:title', content: 'Agmatia Alliance' },
+    { property: 'og:description', content: 'Agmatia Alliance builds useful software and dependable systems through pragmatic, independent engineering.' },
+    { property: 'og:url', content: 'https://agmatia.org/' },
+    { name: 'twitter:title', content: 'Agmatia Alliance' },
+    { name: 'twitter:description', content: 'Agmatia Alliance builds useful software and dependable systems through pragmatic, independent engineering.' }
+  ],
+  link: [{ rel: 'canonical', href: 'https://agmatia.org/' }]
+})
 
 const capabilities = [
   {

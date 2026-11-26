@@ -13,3 +13,5 @@ In Cloudflare, connect this GitHub repository as a Worker and configure:
 
 Cloudflare will then build and deploy on pushes to the configured production
 branch. No GitHub Actions workflow, API token, or account ID secret is needed.
+The `preview` Wrangler environment gives pull request builds a separate Worker
+named `agmatia-org-preview` instead of deploying them to the production Worker.

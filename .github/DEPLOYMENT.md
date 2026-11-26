@@ -1,8 +1,9 @@
 # Deployment: Cloudflare static assets
 
 This repository builds with Vue, Vite, and Vuetify and is configured for
-Cloudflare Workers Static Assets. `wrangler.toml` sets the Worker name and
-serves the generated files from `./dist`.
+Cloudflare Workers Static Assets. `wrangler.toml` sets the Worker name, serves
+the generated files from `./dist`, and falls back to the SPA entry point for
+unmatched paths so Vue Router can handle direct navigation.
 
 In Cloudflare, connect this GitHub repository as a Worker and configure:
 
